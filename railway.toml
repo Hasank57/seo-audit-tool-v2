@@ -2,7 +2,7 @@
 builder = "dockerfile"
 
 [deploy]
-# No startCommand - let Dockerfile handle it
+startCommand = "uvicorn backend.main:app --host 0.0.0.0 --port $PORT"
 healthcheckPath = "/api/health"
 healthcheckTimeout = 300
 restartPolicyType = "on_failure"
