@@ -2,7 +2,6 @@
 builder = "dockerfile"
 
 [deploy]
-# Removed startCommand to let Dockerfile handle it
 healthcheckPath = "/api/health"
 healthcheckTimeout = 300
 restartPolicyType = "on_failure"
